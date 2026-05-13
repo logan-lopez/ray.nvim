@@ -1,13 +1,11 @@
 
-
-```markdown
 # nvim-ray
 
 Neovim client for Spatie’s Ray debugger. Wraps the CLI with a Lua API via `vim.system`.
 
 ## Requirements
 -  Neovim 0.9+
--  [Ray CLI](https://github.com/spatie/ray) installed and in `$PATH`
+-  [Ray CLI](https://github.com/permafrost-dev/node-ray-cli) installed and in `$PATH`
 
 ## Installation
 ```lua
@@ -42,7 +40,6 @@ Methods map directly to `ray <command>` CLI calls:
 -  Uses `vim.system` under the hood. Calls are non-blocking by default in Neovim 0.10+.
 -  Ray must be listening on its default socket for payloads to appear.
 -  No configuration needed. Drop it in and start calling `_G.ray`.
-```
 
 ```lua
 -- nvim-ray: spawns a shell process for every ray.send() like it's 2014
